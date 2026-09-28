@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🛠️ Awesome Free Dev Tools</title>
-  <meta name="description" content="Kho báu công cụ miễn phí (Free Tier) tốt nhất dành cho lập trình viên và Vibe Coder">
+  <meta name="description" content="The best free-tier tools collection for developers and Vibe Coders">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
@@ -34,7 +34,7 @@
 <body>
   <div class="header">
     <h1>🛠️ Awesome Free Dev Tools</h1>
-    <p>Kho báu công cụ miễn phí (Free Tier) tốt nhất dành cho lập trình viên và Vibe Coder.</p>
+    <p>The best free-tier tools collection for developers and Vibe Coders.</p>
     <div style="margin-top: 15px;">
       <a href="https://github.com/pnnnhan99/awesome-free-dev-tools"><img src="https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
       <a href="https://github.com/pnnnhan99/awesome-free-dev-tools"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"></a>
@@ -47,7 +47,7 @@
   </div>
   <div class="container" id="content">Loading...</div>
   <div class="footer">
-    <p>Made with 💜 bởi cộng đồng Awesome Free Dev Tools</p>
+    <p>Made with 💜 by the Awesome Free Dev Tools community</p>
     <p id="last-updated"></p>
   </div>
   <script>
@@ -56,15 +56,15 @@
       .then(tools => {
         const total = tools.length;
         document.getElementById('total').textContent = total;
-        document.getElementById('last-updated').textContent = 'Last updated: ' + new Date().toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'});
+        document.getElementById('last-updated').textContent = 'Last updated: ' + new Date().toLocaleString('en-US', {timeZone: 'Asia/Ho_Chi_Minh'});
         const groups = {};
         for (const t of tools) {
           if (!groups[t.category]) groups[t.category] = [];
           groups[t.category].push(t);
         }
-        let html = '<p style="text-align:center;padding:40px;color:#94a3b8;">Xem danh sách đầy đủ tại <a href="https://github.com/pnnnhan99/awesome-free-dev-tools/blob/main/README.md">README.md</a></p>';
+        let html = '<p style="text-align:center;padding:40px;color:#94a3b8;">View full list at <a href="https://github.com/pnnnhan99/awesome-free-dev-tools/blob/main/README.md">README.md</a></p>';
         for (const [cat, items] of Object.entries(groups)) {
-          html += `<h2>${cat} (${items.length})</h2>`;
+          html += `<h2 id="${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${cat} (${items.length})</h2>`;
           html += '<table><tr><th>Tool</th><th>Purpose</th></tr>';
           for (const t of items) {
             html += `<tr><td><a href="${t.url}" target="_blank">${t.name}</a></td><td>${t.purpose}</td></tr>`;
@@ -73,7 +73,7 @@
         }
         document.getElementById('content').innerHTML = html;
       })
-      .catch(() => { document.getElementById('content').innerHTML = '<p style="text-align:center;color:#ef4444;">Không thể tải dữ liệu.</p>'; });
+      .catch(() => { document.getElementById('content').innerHTML = '<p style="text-align:center;color:#ef4444;">Failed to load data.</p>'; });
   </script>
 </body>
 </html>

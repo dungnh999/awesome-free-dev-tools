@@ -1,172 +1,172 @@
 # 🛠️ Awesome Free Dev Tools
 
 [![Total Tools](https://img.shields.io/badge/Total_Tools-16-blue?style=for-the-badge)](https://github.com/pnnnhan99/awesome-free-dev-tools)
-[![Online](https://img.shields.io/badge/Online-15-brightgreen?style=for-the-badge)](https://github.com/pnnnhan99/awesome-free-dev-tools)
-[![Offline](https://img.shields.io/badge/Offline-1-red?style=for-the-badge)](https://github.com/pnnnhan99/awesome-free-dev-tools)
+[![Online](https://img.shields.io/badge/Online-16-brightgreen?style=for-the-badge)](https://github.com/pnnnhan99/awesome-free-dev-tools)
+[![Offline](https://img.shields.io/badge/Offline-0-red?style=for-the-badge)](https://github.com/pnnnhan99/awesome-free-dev-tools)
 [![Auto Update](https://img.shields.io/badge/Auto_Update-Active-purple?style=for-the-badge&logo=github-actions)](https://github.com/pnnnhan99/awesome-free-dev-tools)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> 🎯 **Kho báu công cụ miễn phí (Free Tier) tốt nhất** dành cho giới lập trình viên và Vibe Coder. Hệ thống tự động kiểm tra trạng thái website mỗi đêm để đảm bảo thông tin luôn chính xác.
+> 🎯 **The best free-tier tools collection** for developers and Vibe Coders. Status is automatically checked every night to keep information accurate.
 >
-> 🤝 **Bạn muốn đóng góp?** Hãy mở một Pull Request hoặc tạo Issue để gợi ý tool mới!
+> 🤝 **Want to contribute?** Open a Pull Request or create an Issue to suggest a new tool!
 
-## 📋 Tổng quan
+## 📋 Overview
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 |---|---|
-| Tổng số Tools | 16 |
-| 🟢 Đang hoạt động | 15 |
-| 🔴 Không phản hồi | 1 |
-| Cập nhật lần cuối | 10:55:14 28/9/2026 (GMT+7) |
+| Total Tools | 16 |
+| 🟢 Online | 16 |
+| 🔴 Offline | 0 |
+| Last Updated | 9/28/2026, 11:12:41 AM (GMT+7) |
 
 ---
 
-## 📂 Mục lục
+## 📂 Table of Contents
 
-- [🗄️ Database & Backend](#database-backend)
-- [☁️ Cloud & Hosting](#cloud-hosting)
-- [📦 Storage & Media](#storage-media)
-- [📧 Email & Communication](#email-communication)
-- [🤖 AI & ML](#ai-ml)
-- [🎨 UI & Design](#ui-design)
-- [🔧 Developer Tools](#developer-tools)
-- [⚙️ DevOps](#devops)
-- [💳 Payment](#payment)
-- [👤 Profile & Identity](#profile-identity)
-- [🔒 Security](#security)
-- [📝 Productivity](#productivity)
-- [🏠 Self-hosted](#self-hosted)
-- [💾 Hardware & Storage](#hardware-storage)
+- [Database & Backend](#database-backend)
+- [Cloud & Hosting](#cloud-hosting)
+- [Storage & Media](#storage-media)
+- [Email & Communication](#email-communication)
+- [AI & ML](#ai-ml)
+- [UI & Design](#ui-design)
+- [Developer Tools](#developer-tools)
+- [DevOps](#devops)
+- [Payment](#payment)
+- [Profile & Identity](#profile-identity)
+- [Security](#security)
+- [Productivity](#productivity)
+- [Self-hosted](#self-hosted)
+- [Hardware & Storage](#hardware-storage)
 
 ---
 
-### 🗄️ Database & Backend
+### Database & Backend
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Supabase](https://supabase.com) | PostgreSQL and backend services (Auth, Storage, Realtime) | 🟢 Hoạt động |
-| [Neon](https://neon.tech) | Serverless PostgreSQL | 🟢 Hoạt động |
-| [Firebase](https://firebase.google.com) | Authentication and cloud services | 🟢 Hoạt động |
+| [Supabase](https://supabase.com) | PostgreSQL and backend services (Auth, Storage, Realtime) | 🟢 Online |
+| [Neon](https://neon.tech) | Serverless PostgreSQL | 🟢 Online |
+| [Firebase](https://firebase.google.com) | Authentication and cloud services | 🟢 Online |
 
 ---
 
-### ☁️ Cloud & Hosting
+### Cloud & Hosting
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Render](https://render.com) | Application hosting (Web, Worker, Cron) | 🟢 Hoạt động |
+| [Render](https://render.com) | Application hosting (Web, Worker, Cron) | 🟢 Online |
 
 ---
 
-### 📦 Storage & Media
+### Storage & Media
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Cloudinary](https://cloudinary.com) | Image/Video storage and on-the-fly optimization | 🟢 Hoạt động |
+| [Cloudinary](https://cloudinary.com) | Image/Video storage and on-the-fly optimization | 🟢 Online |
 
 ---
 
-### 📧 Email & Communication
+### Email & Communication
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Resend](https://resend.com) | Transactional email for developers | 🟢 Hoạt động |
+| [Resend](https://resend.com) | Transactional email for developers | 🟢 Online |
 
 ---
 
-### 🤖 AI & ML
+### AI & ML
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Hugging Face](https://huggingface.co) | AI models, datasets, and Spaces hosting | 🟢 Hoạt động |
+| [Hugging Face](https://huggingface.co) | AI models, datasets, and Spaces hosting | 🟢 Online |
 
 ---
 
-### 🎨 UI & Design
+### UI & Design
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [UI.RIP](https://ui.rip) | Clone/recreate web UI elements | 🟢 Hoạt động |
+| [UI.RIP](https://ui.rip) | Clone/recreate web UI elements | 🟢 Online |
 
 ---
 
-### 🔧 Developer Tools
+### Developer Tools
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Webhook.site](https://webhook.site) | Instant webhook testing and debugging | 🟢 Hoạt động |
+| [Webhook.site](https://webhook.site) | Instant webhook testing and debugging | 🟢 Online |
 
 ---
 
-### ⚙️ DevOps
+### DevOps
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Dockhand](https://dockhand.dev) | Docker management | 🔴 Không phản hồi |
+| [Dockhand](https://dockhand.pro) | Docker management | 🟢 Online |
 
 ---
 
-### 💳 Payment
+### Payment
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [SePay](https://sepay.vn) | Payment integration (VietQR & Banking) | 🟢 Hoạt động |
+| [SePay](https://sepay.vn) | Payment integration (VietQR & Banking) | 🟢 Online |
 
 ---
 
-### 👤 Profile & Identity
+### Profile & Identity
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Gravatar](https://gravatar.com) | Globally Recognized User Avatars | 🟢 Hoạt động |
+| [Gravatar](https://gravatar.com) | Globally Recognized User Avatars | 🟢 Online |
 
 ---
 
-### 🔒 Security
+### Security
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Google reCAPTCHA](https://www.google.com/recaptcha/about/) | Anti-bot protection | 🟢 Hoạt động |
+| [Google reCAPTCHA](https://www.google.com/recaptcha/about/) | Anti-bot protection | 🟢 Online |
 
 ---
 
-### 📝 Productivity
+### Productivity
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Notion](https://notion.so) | Documentation, planning and notes | 🟢 Hoạt động |
+| [Notion](https://notion.so) | Documentation, planning and notes | 🟢 Online |
 
 ---
 
-### 🏠 Self-hosted
+### Self-hosted
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Home Assistant](https://www.home-assistant.io) | Smart Home automation | 🟢 Hoạt động |
+| [Home Assistant](https://www.home-assistant.io) | Smart Home automation | 🟢 Online |
 
 ---
 
-### 💾 Hardware & Storage
+### Hardware & Storage
 
-| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |
+| Tool & Link | Purpose | Status |
 |---|---|---|
-| [Synology](https://www.synology.com) | NAS for file and backup storage | 🟢 Hoạt động |
+| [Synology](https://www.synology.com) | NAS for file and backup storage | 🟢 Online |
 
 ---
 
-## 📝 Ghi chú
+## 📝 Notes
 
-- **Trạng thái** được kiểm tra tự động mỗi đêm bởi GitHub Actions.
-- 🟢 Hoạt động: Server phản hồi (status < 500).
-- 🔴 Không phản hồi: Timeout, DNS error, hoặc server lỗi (status >= 500).
-- Mọi đóng góp xin gửi PR tại [GitHub](https://github.com/pnnnhan99/awesome-free-dev-tools).
+- **Status** is automatically checked every night by GitHub Actions.
+- 🟢 Online: Server responds (status < 500).
+- 🔴 Offline: Timeout, DNS error, or server error (status >= 500).
+- All contributions welcome via PR at [GitHub](https://github.com/pnnnhan99/awesome-free-dev-tools).
 
 ---
 
 <p align="center">
-  Made with 💜 bởi cộng đồng <a href="https://github.com/pnnnhan99/awesome-free-dev-tools">Awesome Free Dev Tools</a>
+  Made with 💜 by the <a href="https://github.com/pnnnhan99/awesome-free-dev-tools">Awesome Free Dev Tools</a> community
 </p>
 
 <p align="center">
-  🕐 Last updated: 10:55:14 28/9/2026
+  🕐 Last updated: 9/28/2026, 11:12:41 AM
 </p>

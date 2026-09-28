@@ -5,16 +5,20 @@ const path = require("path");
 const TOOLS_FILE = path.join(__dirname, "..", "data", "tools.json");
 const README_FILE = path.join(__dirname, "..", "README.md");
 
-const STATUS_ONLINE = "🟢 Hoạt động";
-const STATUS_OFFLINE = "🔴 Không phản hồi";
+const STATUS_ONLINE = "🟢 Online";
+const STATUS_OFFLINE = "🔴 Offline";
 
 const BROWSER_HEADERS = {
   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
   "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-  "Accept-Language": "en-US,en;q=0.9,vi;q=0.8",
+  "Accept-Language": "en-US,en;q=0.9",
   "Accept-Encoding": "gzip, deflate, br",
   "Connection": "keep-alive",
 };
+
+function slug(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
 
 async function checkTool(tool) {
   try {
@@ -41,7 +45,7 @@ async function checkTool(tool) {
 function groupByCategory(toolsWithStatus) {
   const groups = {};
   for (const item of toolsWithStatus) {
-    const cat = item.tool.category || "Khác";
+    const cat = item.tool.category || "Other";
     if (!groups[cat]) groups[cat] = [];
     groups[cat].push(item);
   }
@@ -53,7 +57,7 @@ function generateMarkdown(toolsWithStatus) {
   const online = toolsWithStatus.filter((t) => t.status === STATUS_ONLINE).length;
   const offline = total - online;
   const groups = groupByCategory(toolsWithStatus);
-  const now = new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" });
+  const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
 
   let md = `# 🛠️ Awesome Free Dev Tools
 
@@ -63,36 +67,34 @@ function generateMarkdown(toolsWithStatus) {
 [![Auto Update](https://img.shields.io/badge/Auto_Update-Active-purple?style=for-the-badge&logo=github-actions)](https://github.com/pnnnhan99/awesome-free-dev-tools)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> 🎯 **Kho báu công cụ miễn phí (Free Tier) tốt nhất** dành cho giới lập trình viên và Vibe Coder. Hệ thống tự động kiểm tra trạng thái website mỗi đêm để đảm bảo thông tin luôn chính xác.
+> 🎯 **The best free-tier tools collection** for developers and Vibe Coders. Status is automatically checked every night to keep information accurate.
 >
-> 🤝 **Bạn muốn đóng góp?** Hãy mở một Pull Request hoặc tạo Issue để gợi ý tool mới!
+> 🤝 **Want to contribute?** Open a Pull Request or create an Issue to suggest a new tool!
 
-## 📋 Tổng quan
+## 📋 Overview
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 |---|---|
-| Tổng số Tools | ${total} |
-| 🟢 Đang hoạt động | ${online} |
-| 🔴 Không phản hồi | ${offline} |
-| Cập nhật lần cuối | ${now} (GMT+7) |
+| Total Tools | ${total} |
+| 🟢 Online | ${online} |
+| 🔴 Offline | ${offline} |
+| Last Updated | ${now} (GMT+7) |
 
 ---
 
-## 📂 Mục lục
+## 📂 Table of Contents
 
 `;
 
   for (const category of Object.keys(groups)) {
-    const emoji = getCategoryEmoji(category);
-    md += `- [${emoji} ${category}](#${category.toLowerCase().replace(/[^a-z0-9]+/g, "-")})\n`;
+    md += `- [${category}](#${slug(category)})\n`;
   }
 
   md += `\n---\n\n`;
 
   for (const [category, items] of Object.entries(groups)) {
-    const emoji = getCategoryEmoji(category);
-    md += `### ${emoji} ${category}\n\n`;
-    md += `| Tên Tool & Link | Mục đích (Purpose) | Trạng thái |\n`;
+    md += `### ${category}\n\n`;
+    md += `| Tool & Link | Purpose | Status |\n`;
     md += `|---|---|---|\n`;
 
     for (const item of items) {
@@ -102,17 +104,17 @@ function generateMarkdown(toolsWithStatus) {
     md += `\n---\n\n`;
   }
 
-  md += `## 📝 Ghi chú
+  md += `## 📝 Notes
 
-- **Trạng thái** được kiểm tra tự động mỗi đêm bởi GitHub Actions.
-- 🟢 Hoạt động: Server phản hồi (status < 500).
-- 🔴 Không phản hồi: Timeout, DNS error, hoặc server lỗi (status >= 500).
-- Mọi đóng góp xin gửi PR tại [GitHub](https://github.com/pnnnhan99/awesome-free-dev-tools).
+- **Status** is automatically checked every night by GitHub Actions.
+- 🟢 Online: Server responds (status < 500).
+- 🔴 Offline: Timeout, DNS error, or server error (status >= 500).
+- All contributions welcome via PR at [GitHub](https://github.com/pnnnhan99/awesome-free-dev-tools).
 
 ---
 
 <p align="center">
-  Made with 💜 bởi cộng đồng <a href="https://github.com/pnnnhan99/awesome-free-dev-tools">Awesome Free Dev Tools</a>
+  Made with 💜 by the <a href="https://github.com/pnnnhan99/awesome-free-dev-tools">Awesome Free Dev Tools</a> community
 </p>
 
 <p align="center">
@@ -121,26 +123,6 @@ function generateMarkdown(toolsWithStatus) {
 `;
 
   return md;
-}
-
-function getCategoryEmoji(category) {
-  const map = {
-    "Database & Backend": "🗄️",
-    "Cloud & Hosting": "☁️",
-    "Storage & Media": "📦",
-    "Email & Communication": "📧",
-    "AI & ML": "🤖",
-    "UI & Design": "🎨",
-    "Developer Tools": "🔧",
-    "DevOps": "⚙️",
-    "Payment": "💳",
-    "Profile & Identity": "👤",
-    "Security": "🔒",
-    "Productivity": "📝",
-    "Self-hosted": "🏠",
-    "Hardware & Storage": "💾",
-  };
-  return map[category] || "📦";
 }
 
 async function main() {

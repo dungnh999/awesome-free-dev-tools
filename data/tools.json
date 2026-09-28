@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Supabase",
+        "url": "https://supabase.com",
+        "category": "Database & Backend",
+        "purpose": "PostgreSQL and backend services (Auth, Storage, Realtime)"
+    },
+    {
+        "name": "Neon",
+        "url": "https://neon.tech",
+        "category": "Database & Backend",
+        "purpose": "Serverless PostgreSQL"
+    },
+    {
+        "name": "Firebase",
+        "url": "https://firebase.google.com",
+        "category": "Database & Backend",
+        "purpose": "Authentication and cloud services"
+    },
+    {
+        "name": "Render",
+        "url": "https://render.com",
+        "category": "Cloud & Hosting",
+        "purpose": "Application hosting (Web, Worker, Cron)"
+    },
+    {
+        "name": "Cloudinary",
+        "url": "https://cloudinary.com",
+        "category": "Storage & Media",
+        "purpose": "Image/Video storage and on-the-fly optimization"
+    },
+    {
+        "name": "Resend",
+        "url": "https://resend.com",
+        "category": "Email & Communication",
+        "purpose": "Transactional email for developers"
+    },
+    {
+        "name": "Hugging Face",
+        "url": "https://huggingface.co",
+        "category": "AI & ML",
+        "purpose": "AI models, datasets, and Spaces hosting"
+    },
+    {
+        "name": "UI.RIP",
+        "url": "https://ui.rip",
+        "category": "UI & Design",
+        "purpose": "Clone/recreate web UI elements"
+    },
+    {
+        "name": "Webhook.site",
+        "url": "https://webhook.site",
+        "category": "Developer Tools",
+        "purpose": "Instant webhook testing and debugging"
+    },
+    {
+        "name": "Dockhand",
+        "url": "https://dockhand.dev",
+        "category": "DevOps",
+        "purpose": "Docker management"
+    },
+    {
+        "name": "SePay",
+        "url": "https://sepay.vn",
+        "category": "Payment",
+        "purpose": "Payment integration (VietQR & Banking)"
+    },
+    {
+        "name": "Gravatar",
+        "url": "https://gravatar.com",
+        "category": "Profile & Identity",
+        "purpose": "Globally Recognized User Avatars"
+    },
+    {
+        "name": "Google reCAPTCHA",
+        "url": "https://www.google.com/recaptcha/about/",
+        "category": "Security",
+        "purpose": "Anti-bot protection"
+    },
+    {
+        "name": "Notion",
+        "url": "https://notion.so",
+        "category": "Productivity",
+        "purpose": "Documentation, planning and notes"
+    },
+    {
+        "name": "Home Assistant",
+        "url": "https://www.home-assistant.io",
+        "category": "Self-hosted",
+        "purpose": "Smart Home automation"
+    },
+    {
+        "name": "Synology",
+        "url": "https://www.synology.com",
+        "category": "Hardware & Storage",
+        "purpose": "NAS for file and backup storage"
+    }
+]

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🛠️ Awesome Free Dev Tools</title>
+  <meta name="description" content="Kho báu công cụ miễn phí (Free Tier) tốt nhất dành cho lập trình viên và Vibe Coder">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+    .header { background: linear-gradient(135deg, #1e3a5f, #0f172a); padding: 40px 20px; text-align: center; border-bottom: 3px solid #3b82f6; }
+    .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .header p { font-size: 1.1rem; color: #94a3b8; max-width: 700px; margin: 0 auto; }
+    .stats { display: flex; justify-content: center; gap: 30px; margin: 20px auto; flex-wrap: wrap; }
+    .stat-card { background: #1e293b; padding: 20px 30px; border-radius: 12px; text-align: center; min-width: 150px; border: 1px solid #334155; }
+    .stat-card .number { font-size: 2rem; font-weight: bold; }
+    .stat-card .label { font-size: 0.9rem; color: #94a3b8; margin-top: 5px; }
+    .stat-card.live .number { color: #22c55e; }
+    .stat-card.dead .number { color: #ef4444; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .category { margin-bottom: 30px; }
+    .category h2 { font-size: 1.5rem; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #334155; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #1e293b; }
+    th { background: #1e293b; font-weight: 600; }
+    tr:hover { background: #1e293b; }
+    a { color: #3b82f6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer { text-align: center; padding: 30px; color: #64748b; border-top: 1px solid #1e293b; margin-top: 40px; }
+    @media (max-width: 768px) { .header h1 { font-size: 1.8rem; } table { font-size: 0.85rem; } }
+  </style>
+  <meta http-equiv="refresh" content="300">
+</head>
+<body>
+  <div class="header">
+    <h1>🛠️ Awesome Free Dev Tools</h1>
+    <p>Kho báu công cụ miễn phí (Free Tier) tốt nhất dành cho lập trình viên và Vibe Coder.</p>
+    <div style="margin-top: 15px;">
+      <a href="https://github.com/pnnnhan99/awesome-free-dev-tools"><img src="https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
+      <a href="https://github.com/pnnnhan99/awesome-free-dev-tools"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"></a>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat-card"><div class="number" id="total">Loading...</div><div class="label">Total Tools</div></div>
+    <div class="stat-card live"><div class="number" id="live">-</div><div class="label">🟢 Online</div></div>
+    <div class="stat-card dead"><div class="number" id="dead">-</div><div class="label">🔴 Offline</div></div>
+  </div>
+  <div class="container" id="content">Loading...</div>
+  <div class="footer">
+    <p>Made with 💜 bởi cộng đồng Awesome Free Dev Tools</p>
+    <p id="last-updated"></p>
+  </div>
+  <script>
+    fetch('https://raw.githubusercontent.com/pnnnhan99/awesome-free-dev-tools/main/data/tools.json')
+      .then(r => r.json())
+      .then(tools => {
+        const total = tools.length;
+        document.getElementById('total').textContent = total;
+        document.getElementById('last-updated').textContent = 'Last updated: ' + new Date().toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'});
+        const groups = {};
+        for (const t of tools) {
+          if (!groups[t.category]) groups[t.category] = [];
+          groups[t.category].push(t);
+        }
+        let html = '<p style="text-align:center;padding:40px;color:#94a3b8;">Xem danh sách đầy đủ tại <a href="https://github.com/pnnnhan99/awesome-free-dev-tools/blob/main/README.md">README.md</a></p>';
+        for (const [cat, items] of Object.entries(groups)) {
+          html += `<h2>${cat} (${items.length})</h2>`;
+          html += '<table><tr><th>Tool</th><th>Purpose</th></tr>';
+          for (const t of items) {
+            html += `<tr><td><a href="${t.url}" target="_blank">${t.name}</a></td><td>${t.purpose}</td></tr>`;
+          }
+          html += '</table>';
+        }
+        document.getElementById('content').innerHTML = html;
+      })
+      .catch(() => { document.getElementById('content').innerHTML = '<p style="text-align:center;color:#ef4444;">Không thể tải dữ liệu.</p>'; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+    "name": "awesome-free-dev-tools",
+    "version": "1.0.0",
+    "description": "A compilation of the best free tools for developers and coder vibes.",
+    "main": "scripts/build-readme.js",
+    "scripts": {
+        "build": "node scripts/build-readme.js",
+        "start": "node scripts/build-readme.js"
+    },
+    "keywords": [
+        "dev-tools",
+        "free-tools",
+        "developer",
+        "vibe-coding",
+        "open-source"
+    ],
+    "author": "pnnnhan99",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.7.2",
+        "chalk": "^4.1.2"
+    }
+}

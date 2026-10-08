@@ -63,6 +63,13 @@
         "pricing": "Free Tier"
     },
     {
+        "name": "Cloudflare R2",
+        "url": "https://www.cloudflare.com/products/r2",
+        "category": "Storage & Media",
+        "purpose": "Image/Video storage and on-the-fly optimization",
+        "pricing": "Free Tier"
+    },
+    {
         "name": "Resend",
         "url": "https://resend.com",
         "category": "Email & Communication",
